@@ -1,3 +1,4 @@
+#OBJECT-ORIENTED PYTHON PROGRAMMING
 
 #Creating a class:
 
@@ -10,7 +11,7 @@ class Classname:
         self.param1 = param1
         self.param2 = param2
 
-    def instance_method_name(self, param):
+    def regular_method_name(self, param):
         #Code that does something to self.param
         return self.param
 
@@ -38,6 +39,62 @@ class Classname:
 
 #-------------------------------------------------------------------------------------------------------------
 
+#Calling a class attribute using class name:
+
+Classname.attribute_name
+##returns attribute_value##
+
+#Calling a class attribute using instance variable:
+
+instance_var = Classname(attribute_name = attribute_value)
+instance_var.attribute_name = new_attribute_value
+instance_var.attribute_name
+##returns new_attribute_value##
+
+#Calling a regular method:
+
+instance_var = Classname(arg)
+
+
+#Calling a class method using class name:
+
+
+
+
+#Calling a class method using instance variable:
+
+
+
+
+#Calling a static method:
+
+
+
+
+#Calling a special (magic/dunder) method:
+
+builtin_operator_method_name(arg)
+
+#OR
+
+arg.__builtin_operator_method_name__()
+
+##both return value of arg operated on with builtin_operator_method_name##
+##special method##
+
+
+#Checking if object is an instance of a class using isinstance() function
+
+isinstance(object_name,Classname)
+##returns boolean value##
+
+
+#Checking if object is a class/subclass of another class using issubclass() function
+
+issubclass(object_name,Classname)
+##returns boolean value##
+
+
 #-------------------------------------------------------------------------------------------------------------
 
 #Creating a subclass of a class:
@@ -56,6 +113,18 @@ class Subclassname(Classname):
     def subclass_classmethod_name(cls, param):
         #Code that does something to cls.param7
         return cls.param
+
+#Change functionality of inherited regular method exclusively within subclass:
+
+    def __init___of_Subclassname(self, param, added_param):
+        super().__init__(param) #Imports value of param from Classname (the parent class)
+        self.added_param = added_param_value #Assigns value to new parameter added_param
+
+    def modified_inherited_reg_method(self):
+        #Code that does something with self.param and self.added_param
+        return #Statement using self.param and self.added_param
+
+    #NOTE: ^ ALWAYS CALL ORIGINAL DEF OF METHOD FROM PARENT CLASS ^
 
 #Creating a property object:
 
