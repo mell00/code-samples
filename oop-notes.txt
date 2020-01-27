@@ -1,0 +1,3 @@
+
+
+property: special kind of attribute with getter/setter/deleter method capabilities
