@@ -5,8 +5,6 @@
 class Classname:
     attribute_name = attribute_value
 
-
-
     def __init__(self,param1,param2):
         self.param1 = param1
         self.param2 = param2
@@ -51,25 +49,25 @@ instance_var.attribute_name = new_attribute_value
 instance_var.attribute_name
 ##returns new_attribute_value##
 
-#Calling a regular method:
+#Storing the value returned by calling a regular method using instance variable:
 
 instance_var = Classname(arg)
 
-
 #Calling a class method using class name:
 
-
-
+Classname.classmethod_name(arg3)
+##returns cls.arg3##
 
 #Calling a class method using instance variable:
 
+cls_instance_var = Classname(arg3)
+cls_instance_var.classmethod_name
+##returns cls.arg3##
 
+#Calling a static method (using class name):
 
-
-#Calling a static method:
-
-
-
+Classname.staticmethod_name(arg6)
+##returns staticmethod_name(arg6)##
 
 #Calling a special (magic/dunder) method:
 
@@ -93,6 +91,22 @@ isinstance(object_name,Classname)
 
 issubclass(object_name,Classname)
 ##returns boolean value##
+
+
+#Setting value for new or existing attribute within an object using setattr() function
+
+setattr(object_name,attribute_name,attribute_value)
+##creates attibute_name within object_name and sets value to attribute_value##
+##alternatively, sets existing attribute_name of object_name to attribute_value##
+
+
+#Return dictionary representation of object's (writable) attributes using __dict__ attribute
+
+object_name.__dict__['attribute_name_or_value']
+##if __dict__ lacks arguments, prints map of entire dictionary consisting of all (writable) attributes within object_name##
+##if argument is entered, locates associated attribute_value_or_name within dictionary##
+
+
 
 
 #-------------------------------------------------------------------------------------------------------------
