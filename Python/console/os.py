@@ -55,12 +55,24 @@ var4 = os.path.isdir("file_path")
 print(var4)
 ##Prints boolean value##
 
+#Convert file path into "normalized"/lowercase characters; in Windows, forward slashes become backward slashes
 var5 = os.path.normcase("file_path")
 print(var5)
 ##Prints lowercase file_path##
 
+#Print file path without redundant separators and up-level references; in Windows, forward slashes become backward slashes
 var6 = os.path.normpath("file_path")
 print(var6)
 ##Prints file_path without redundant separators and/or up-level references##
 
+#Access tuple of directory name(s) and file name(s) of a given file path in individual strings:
 os.path.split("file_path")
+##Returns "parent_directory", "file_name"##
+
+#Find whether a given file path name exists or not:
+os.path.exists("file_path")
+##Returns boolean value##
+
+#Find whether a given file exists or not:
+os.path.isfile("file_path")
+##Returns boolean value##
