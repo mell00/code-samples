@@ -39,18 +39,22 @@ os.environ(["environ_variable_name"])
 
 os.environ.get("environ_variable_name")
 
+#Retrieve file name from given path, excluding the file path name:
 var = os.path.basename("file_path")
 print(var)
 ##Prints "file_name"##
 
+#Retrieve directory name from given file path, excluding the file path name:
 var2 = os.path.dirname("directory_file_path")
 print(var2)
 ##Prints "directory_name"##
 
+#Determines whether specified file path is absolute or not:
 var3 = os.path.isabs("file_path")
 print(var3)
 ##Prints boolean value##
 
+#Determines whether specified file path is an existing directory or not:
 var4 = os.path.isdir("file_path")
 print(var4)
 ##Prints boolean value##
