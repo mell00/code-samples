@@ -60,3 +60,24 @@ var object_name = {
   property_3 : value_3,
   . . .
 }
+
+object_name['property_name']
+OR
+object_name.property_name
+
+object_name.property_name.sub_property_name
+
+object_name.property_name.property_method_name
+
+var object_name = {};
+object_name.new_property_name = new_property_value;
+
+for (var property_name in object_name) {
+  console.log(property_name);
+}
+
+for (var property_name in object_name) {
+  console.log(object_name[property_name]);
+}
+
+var array_name = [object_1, object_2, .., object_#];
