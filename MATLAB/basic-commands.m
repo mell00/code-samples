@@ -10,11 +10,19 @@ diary off
 
 whos
 
+clc
+
 clear
 
 help command
 
 doc command
+
+format short
+
+format long
+
+disp('text')
 
 x = 1
 
@@ -45,6 +53,18 @@ A^2
 x^2
 
 x.^2
+
+log(2)
+
+sqrt(2)
+
+log10(2)
+
+abs(-2)
+
+sin(2*pi)
+
+floor(2.8)
 
 cos(x)
 
@@ -84,6 +104,8 @@ eye(3,4)
 
 linspace(2.5,3.5,100)
 
+logspace(2.5,3.5,100)
+
 3:4
 
 diag(x)
@@ -114,6 +136,10 @@ eig(A)
 
 [E,F] = eig(A)
 
+size(A)
+
+det(A)
+
 plot(y)
 
 plot(x,y)
@@ -140,4 +166,55 @@ legend('name_of_1st_curve','name_of_2nd_curve')
 
 grid
 
+hold on
+
+%Start a new plot:
 figure
+
+pi
+
+NaN
+
+Inf
+
+realmax
+
+realmin
+
+x == 1
+
+x >= 1
+
+x < 1
+
+x ~= 1
+
+x > 1 && x ~= 3
+
+x > 1 || x ~= 3
+
+for condition
+  executed_code;
+end
+
+initial_value;
+while condition
+  executed_code;
+end
+
+if condition
+  executed_code
+end
+
+if condition
+  executed_code
+elseif condition
+  alternate_executed_code
+end
+
+if condition
+  executed_code
+else
+  alternate_executed_code
+end
+  
