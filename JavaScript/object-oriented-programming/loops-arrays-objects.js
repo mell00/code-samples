@@ -1,5 +1,7 @@
 //LOOPS, ARRAYS, AND OBJECTS IN JAVASCRIPT//
 
+//Loops:
+
 while (condition) {executed_code}
 
 do {executed_code} while (condition)
@@ -10,12 +12,11 @@ loop(){if(condition) {
   break;
 }}
 
-
+//Arrays:
 
 var array_name = [value_1];
 
 array_name[index_#];
-
 
 var numbers = [1, 2, 3, .., #];
 var modified_array = numbers[numbers.length] = some_number;
@@ -52,7 +53,30 @@ var array_name = [];
 var second_array_name = [];
 var new_concat_array = array_name.concat(second_array_name);
 
+//Array iteration methods:
 
+for (let i=0; i<array.length; i+=1) {const var = array[i]};
+
+array.forEach(var => console.log(var));
+OR
+array.forEach(function callback_function(current_value,index,new_array));
+
+array.filter((params) => {return some_conditional_statement_that_if_true_adds_item_to_array});
+OR
+array.filter(params) => return some_conditional_statement_that_if_true_adds_item_to_array;
+
+array.map((params) => {changes_made_to_array_items});
+
+array.reduce(callback_function(accumulator,current_value));
+OR
+array.reduce(callback_function(accumulator,current_value)).chained_method1().chainedmethod2();
+
+
+
+
+
+
+//Objects:
 
 var object_name = {
   property_1 : value_1,
