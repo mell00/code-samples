@@ -72,10 +72,6 @@ OR
 array.reduce(callback_function(accumulator,current_value)).chained_method1().chainedmethod2();
 
 
-
-
-
-
 //Objects:
 
 var object_name = {
