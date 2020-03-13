@@ -71,6 +71,53 @@ array.reduce(callback_function(accumulator,current_value));
 OR
 array.reduce(callback_function(accumulator,current_value)).chained_method1().chainedmethod2();
 
+//Longest item in array:
+const longestItem = (...vals) => vals.reduce((a, x) => (x.length > a.length ? x : a));
+
+//Most frequent element in array:
+const mostFrequent = arr =>
+  Object.entries(
+    arr.reduce((a, v) => {
+      a[v] = a[v] ? a[v] + 1 : 1;
+      return a;
+    }, {})
+  ).reduce((a, v) => (v[1] >= a[1] ? v : a), [null, 0])[0];
+
+//Split and categorize elements into two groups:
+const bifurcate = (arr, filter) =>
+  arr.reduce((acc, val, i) => (acc[filter[i] ? 0 : 1].push(val), acc), [[], []]);
+
+//Create array of elements ordered by position in original arrays:
+const zip = (...arrays) => {
+  const maxLength = Math.max(...arrays.map(x => x.length));
+  return Array.from({ length: maxLength }).map((_, i) => {
+    return Array.from({ length: arrays.length }, (_, k) => arrays[k][i]);
+  });
+};
+
+//Create array of arrays from ungrouping elements from a zip:
+const unzip = arr =>
+  arr.reduce(
+    (acc, val) => (val.forEach((v, i) => acc[i].push(v)), acc),
+    Array.from({
+      length: Math.max(...arr.map(x => x.length))
+    }).map(x => [])
+  );
+
+//Create array of elements; grouped based on position in original arrays, using function as last value specifying how grouped values are combined:
+const zipWith = (...array) => {
+  const fn = typeof array[array.length - 1] === 'function' ? array.pop() : undefined;
+  return Array.from({ length: Math.max(...array.map(a => a.length)) }, (_, i) =>
+    fn ? fn(...array.map(a => a[i])) : array.map(a => a[i])
+  );
+};
+
+//Count elements in an array:
+const countBy = (arr, fn) =>
+  arr.map(typeof fn === 'function' ? fn : val => val[fn]).reduce((acc, val) => {
+    acc[val] = (acc[val] || 0) + 1;
+    return acc;
+  }, {});
 
 //Objects:
 
@@ -101,3 +148,24 @@ for (var property_name in object_name) {
 }
 
 var array_name = [object_1, object_2, .., object_#];
+
+//Return object associating valid property identifiers (props) from one array and values (values) from a second array:
+const zipObject = (props, values) =>
+  props.reduce((obj, prop, index) => ((obj[prop] = values[index]), obj), {});
+
+//Map values of array to object using function (key-value pairs consisting of stringified value as key and mapped value):
+const mapObject = (arr, fn) =>
+  (a => (
+    (a = [arr, arr.map(fn)]), a[0].reduce((acc, val, ind) => ((acc[val] = a[1][ind]), acc), {})
+  ))();
+
+//Return query string (queryString) generated from key-value pairs of given object:
+const objectToQueryString = queryParameters => {
+    return queryParameters
+      ? Object.entries(queryParameters).reduce((queryString, [key, val], index) => {
+        const symbol = queryString.length === 0 ? '?' : '&';
+        queryString += typeof val === 'string' ? `${symbol}${key}=${val}` : '';
+        return queryString;
+      }, '')
+      : '';
+  };
