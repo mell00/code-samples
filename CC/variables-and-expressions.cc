@@ -8,12 +8,20 @@
 #define abs(x) ((x) >= 0 ? (x) : -(x))
 #define sgn(x) ((x) > 0 ? 1 : ((x) < 0 ? -1 : 0))
 
-void main(int argc, char *argv[]){
-  function_name()
-  {
-    //insert code here
-  }
+//Initialize variable:
+type var_name;
 
+type var_name1,var_name2,var_name3;
+
+type *var_name;
+
+type var_name = value;
+
+type *var_name = value;
+
+var_name = value;
+
+//Data types:
   char = 'ASCII_character';
   int = 1;
   float = 1.0;
@@ -24,6 +32,12 @@ void main(int argc, char *argv[]){
   short = 0.5(1);
 
   void = 'no_data_type_,_reserved_for_functions';
+
+  void main(int argc, char *argv[]){
+    function_name()
+    {
+      //insert code here
+    }
 
   void_function(void){
     executed_code;
