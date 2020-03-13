@@ -54,30 +54,6 @@ x^2
 
 x.^2
 
-log(2)
-
-sqrt(2)
-
-log10(2)
-
-abs(-2)
-
-sin(2*pi)
-
-floor(2.8)
-
-cos(x)
-
-abs(A)
-
-exp(A)
-
-sqrt(A)
-
-expm(A)
-
-sqrtm(A)
-
 x.', A.'
 
 x', A'
@@ -217,4 +193,3 @@ if condition
 else
   alternate_executed_code
 end
-  
