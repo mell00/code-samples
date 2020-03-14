@@ -116,43 +116,6 @@ size(A)
 
 det(A)
 
-plot(y)
-
-plot(x,y)
-
-plot(x,A)
-
-loglog(x,y)
-
-semilogx(x,y)
-
-semilogy(x,y)
-
-fplot(@(x) some_expression, [a,b])
-
-axis equal
-
-title('name_of_plot')
-
-xlabel('name_of_x_axis')
-
-ylabel('name_of_y_axis')
-
-legend('name_of_1st_curve','name_of_2nd_curve')
-
-grid
-
-hold on
-
-%Start a new plot:
-figure
-
-pi
-
-NaN
-
-Inf
-
 realmax
 
 realmin

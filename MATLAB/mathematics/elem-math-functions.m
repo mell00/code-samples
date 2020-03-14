@@ -1,5 +1,15 @@
 %MATLAB ELEMENTARY MATH FUNCTIONS%
 
+%Constant values:%
+pi %3.1415926535..%
+
+i,j %imaginary number unit, sqrt(-1)%
+
+Inf %infinity (∞)%
+
+NaN %not a number%
+
+
 %Arithmetic functions:%
 abs(x) %absolute value of x%
 
