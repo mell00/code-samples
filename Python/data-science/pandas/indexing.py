@@ -43,28 +43,41 @@ dataframe[['column_1','column_2']]
 2         3          6
 dtype: int64
 --------------------------------------------------------------------------------
-#Selection by attribute:
-series.label
-dataframe.column_name
+#Selection..
+    #by attribute:
+    series.label
+    dataframe.column_name
 
-#Selection by row slicing:
-dataframe[sliced_out_index1:sliced_out_index_2]
-OR
-dataframe[::sliced_out_index_count]
+    #by row slicing:
+    dataframe[sliced_out_index1:sliced_out_index_2]
+    OR
+    dataframe[::sliced_out_index_count]
 
-#Selection by label:
-dataframe.loc['label']
-OR
-dataframe.loc[['array','of','labels']]
-OR
-dataframe.loc['slice_with':'labels']
-OR
-dataframe.loc['conditional'] >/</<=/>= value
-OR
-dataframe.loc[callable_single_arg_function]
+    #by label:
+    dataframe.loc['label']
+    OR
+    dataframe.loc[['array','of','labels']]
+    OR
+    dataframe.loc['slice_with':'labels']
+    OR
+    dataframe.loc['conditional'] >/</<=/>= value
+    OR
+    dataframe.loc[callable_single_arg_function]
 --------------------------------------------------------------------------------
 #Selection methods:
+
+dataframe.isin(array_or_dict)
 
 dataframe.where(booln_cond_statemt)
 
 dataframe.query(booln_cond_statemt_or_expression)
+
+dataframe.duplicated()
+
+dataframe.drop_duplicates()
+
+dataframe.get()
+
+dataframe.lookup()
+
+dataframe.reindex()
