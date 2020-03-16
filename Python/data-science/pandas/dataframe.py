@@ -1,6 +1,6 @@
 #PANDAS DATAFRAMES#
 
-#Create a dataframe object:
+#Create a dataframe object..:
 dataframe = pd.DataFrame(data,index=index,columns=columns,dtype=dtype,copy=boolean)
 
 #index:
@@ -9,36 +9,40 @@ dataframe = pd.DataFrame(data,index=index,columns=columns,dtype=dtype,copy=boole
 #copy:
 
 
-#From dictionaries of arrays:
-d = {'column_1':[1,2,3],'column_2':[4,5,6],'column_3':[7,8,9]}
-dataframe = pd.DataFrame(data=d)
-#calling dataframe..
-dataframe
-#will return:
-       column_1   column_2   column_3
-0         1          4          7
-1         2          5          8
-2         3          6          9
-dtype: int64
+    #from dictionaries of arrays:
+    d = {'column_1':[1,2,3],'column_2':[4,5,6],'column_3':[7,8,9]}
+    dataframe = pd.DataFrame(data=d)
+    #calling dataframe..
+    dataframe
+    #will return:
+           column_1   column_2   column_3
+    0         1          4          7
+    1         2          5          8
+    2         3          6          9
+    dtype: int64
 
-#From structured/record arrays:
-
-
-
-#From dictionaries of tuples:
+    #from structured/record arrays:
 
 
 
-#From dictionaries of lists:
+    #from dictionaries of tuples:
 
 
 
-#From lists of dictionaries:
+    #from dictionaries of lists:
 
 
 
-#From dictionaries of series:
+    #from lists of dictionaries:
 
 
 
-#From a series:
+    #from dictionaries of series:
+
+
+
+    #from a series:
+
+
+--------------------------------------------------------------------------------
+#Create a new column
