@@ -21,6 +21,8 @@ type *var_name = value;
 
 var_name = value;
 
+//Initialize pointer (variable)
+
 //Data types:
   char = 'ASCII_character';
   int = 1;
