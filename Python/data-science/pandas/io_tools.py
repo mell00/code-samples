@@ -31,4 +31,8 @@ pd.read_sql_query(sql,con[index_col,..])
 pd.read_sql(sql,con[index_col,..])
 
 #STATA:
-pd.read_stata('file_path')
+statareader = pd.read_stata('file_path')
+statareader.data_label
+statareader.value_labels(self)
+statareader.variable_labels
+statawriter.write_file
