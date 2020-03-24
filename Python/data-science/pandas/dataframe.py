@@ -4,9 +4,24 @@
 dataframe = pd.DataFrame(data,index=index,columns=columns,dtype=dtype,copy=boolean)
 
 #index:
+dataframe.index
+#axes:
+dataframe.axes
 #columns:
+dataframe.columns
+#values:
+dataframe.to_numpy(self,dtype=dtype,copy=boolean)
 #dtype:
+dataframe.dtypes
+    #convert columns to best possible dtypes:
+    dataframe.convert_dtypes(self:frameOrSeries,infer_objects:bool=boolean,convert_string:bool=boolean,convert_integer:bool=boolean,convert_boolean:bool=boolean)
+    #attempt to infer better dtypes for object columns:
+    dataframe.infer_objects(self:frameOrSeries).dtypes
+
+
+
 #copy:
+
 
 
     #from dictionaries of arrays:
