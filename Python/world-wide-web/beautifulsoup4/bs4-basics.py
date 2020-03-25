@@ -56,7 +56,10 @@ type(tag)
         tag.string.replace_with("new_string")
 
         #Comment object (special type of navigable string)
-            
+            #Create a comment object:
+            markup = "<b><!--comment--></b>"
+            soup = BeautifulSoup(markup)
+            comment = soup.b.string
 
     #BeautifulSoup object
         #Represent whole parsed document:
