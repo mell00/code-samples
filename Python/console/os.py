@@ -5,38 +5,52 @@ import os
 #Return list of attributes and methods of an object:
 dir(object_name[index_value])
 
+#Return current working directory of a process:
 os.getcwd()
 
+#Navigate to a file path:
 os.chdir("filepath_excluding_module_os")
 print(os.chdir())
 ##Prints 'filepath/module_os'##
 
+#Return list of files and folders contained within current or specified directory:
 os.listdir("optional_filepath_excluding_module_os")
 
+#Create a new directory (that does not share a name with an existing directory):
 os.mkdir("new_directory_name")
 
+#Create new filepath consisting of a parent directory, and one or more subdirectories:
 os.mkdirs("parent_directory/child_directory/grandchild_directory",directory_mode)
 
+#Delete an existing directory:
 os.rmdir("directory_name")
 
+#Delete an existing filepath consisting of a parent directory, and one or more subdirectories:
 os.removedirs("parent_directory/child_directory/grandchild_directory",directory_mode)
 
+#Rename specified file or folder:
 os.rename("current_name","new_name")
 
+#Retrieve status information of specified file or folder:
 os.stat(file_or_folder)
 
+#Retrieve particular attribute of status information of specified file or folder:
 os.stat(file_or_folder).os_stat_attribute
 
+#Return a tuple containing directory path, directory names, and file names:
 for (root,dirs,files) in os.walk(name.topdownbottomup=true):
     print(root)
     print(dirs)
     print(files)
     print()
 
+#Reassign value of environmental variable to "environ_variable_value":
 os.environ(["environ_variable_name"]) = "environ_variable_value"
 
+#Retrieve value paired to specified environmental variable:
 os.environ(["environ_variable_name"])
 
+#Return a dictionary containing environmental variable:value pairs:
 os.environ.get("environ_variable_name")
 
 #Retrieve file name from given path, excluding the file path name:
