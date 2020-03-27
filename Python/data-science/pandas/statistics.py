@@ -49,6 +49,8 @@ dataframe.var()
 #Return standard deviation of each object:
 dataframe.std()
 
+#Remove rows with any column containing null data:
 dataframe.dropna()
 
+#Replace all null data with specified value:
 dataframe.fillna(value)
