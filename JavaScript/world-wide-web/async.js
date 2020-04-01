@@ -66,3 +66,9 @@ promise.finally(run_when_settled);
 promise.finally(function(){
   //code executed when promise is settled
 });
+
+//.race()
+promise.race(promise);
+//code including values from promise executed immediately after promise is settled
+promise.race([promise_1,promise_2,..,promise_n]);
+//code including values from promises executed in order of fastest promise settled
