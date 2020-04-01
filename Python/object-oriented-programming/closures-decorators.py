@@ -31,7 +31,7 @@
     ##'inner_function'##
     funct_var()
     ##'value'##
-    
+
     #:
     def function(*args):
         list=[]
@@ -52,3 +52,26 @@
 
 
 #Decorators
+    #:
+    def decorator(function):
+        return function
+    @decorator
+
+
+    #:
+
+    def decorator(function):
+        return function
+    @decorator
+    def function_2():
+        return value
+
+        #EQUIVALENT TO..
+    decorated_funct = decorator(function_2)
+    
+    #:
+
+
+
+
+    #:
