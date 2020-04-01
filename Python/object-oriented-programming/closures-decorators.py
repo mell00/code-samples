@@ -68,8 +68,17 @@
 
         #EQUIVALENT TO..
     decorated_funct = decorator(function_2)
-    
+
     #:
+
+    def decorator_1(function_1):
+        return function_1
+    def decorator_2(function_2):
+        return function_2
+    @decorator_1
+    @decorator_2
+    def wrapped_funct():
+        return value
 
 
 
