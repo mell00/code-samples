@@ -21,6 +21,18 @@
     ##'value'##
 
     #:
+    def outer_function():
+        var = 'value'
+        def inner_function():
+            print(var)
+        return inner_function
+    funct_var = outer_function
+    print(funct_var.__name__)
+    ##'inner_function'##
+    funct_var()
+    ##'value'##
+    
+    #:
     def function(*args):
         list=[]
         for i in args:
