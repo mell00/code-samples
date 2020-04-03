@@ -80,6 +80,16 @@
     def wrapped_funct():
         return value
 
+    #:
+    def decorator(*args,**kwargs):
+        def wrapper(function):
+            return function
+        return wrapper
+    @decorator(params)
+    def function_1:
+        return value
+    function_1()
+
 
 
 
