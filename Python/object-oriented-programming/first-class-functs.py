@@ -21,8 +21,10 @@ print(variable)
 print(variable(4))
 ##16##
 
-#Create built-in map() function:
-
+#Create built-in map() function, using the function created above:
+map_var = map(function,args)
+print(map_var)
+##[1,4,9,16,25]##
 
 #Create custom map() function (custom_map), using the function created above:
 def custom_map(function,params):
