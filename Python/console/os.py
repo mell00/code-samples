@@ -104,31 +104,88 @@ var = os.path(bytes_or_"string_objects")
     os.path.isfile("file_path")
     ##Returns boolean value##
 
-#
+    #Print longest common sub_path_name of each path name in path_sequence:
+    path_sequence = ["file_path1","file_path2","file_path3"]
+    var = os.path.commonpath(path_sequence)
+    print(var)
+    ##Prints "sub_path_name"##
 
+    #Print longest path_prefix (taken character-by-character) shared by all path names in path_sequence:
+    path_sequence = ["file_path1","file_path2","file_path3"]
+    var = os.path.commonprefix(path_sequence)
+    print(var)
+    ##Prints "path_prefix"##
 
-#
+    #Return "file_path" with initial "~user" component replaced by the user's home directory:
+    path = "~user/file_path"
+    os.path.expanduser(path)
+    ##Returns "home path/file_path"##
 
+    #
+    path = "~user/file_path"
+    os.path.expandvars(path)
 
-#
+    #
+    path = "~user/file_path"
+    os.path.getatime(path)
 
+    #
+    path = "~user/file_path"
+    os.path.getmtime(path)
 
-#
+    #
+    path = "~user/file_path"
+    os.path.getctime(path)
 
+    #
+    path = "~user/file_path"
+    os.path.getsize(path)
 
-#
+    #
+    path = "~user/file_path"
+    os.path.islink(path)
 
+    #
+    path = "~user/file_path"
+    os.path.ismount(path)
 
-#
+    #
+    path = "~user/file_path"
+    os.path.join(path,*other_paths)
 
+    #
+    path = "~user/file_path"
+    os.path.realpath(path)
 
-#
+    #
+    path = "~user/file_path"
+    os.path.relpath(path,start=os.curdir)
 
+    #
+    path1 = "~user/file_path1"
+    path2 = "~user/file_path2"
+    os.path.samefile(path1,path2)
 
-#
+    #
+    path = "~user/file_path"
+    fp1 =
+    fp2 =
+    os.path.sameopenfile(fp1,fp2)
 
+    #
+    path = "~user/file_path"
+    stat1 =
+    stat2 =
+    os.path.samestat(stat1,stat2)
 
-#
+    #
+    path = "~user/file_path"
+    os.path.splitdrive(path)
 
+    #
+    path = "~user/file_path"
+    os.path.splittext(path)
 
-#
+    #
+    path = "~user/file_path"
+    os.path.supports_unicode_filenames
