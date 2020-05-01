@@ -53,44 +53,82 @@ os.environ(["environ_variable_name"])
 #Return a dictionary containing environmental variable:value pairs:
 os.environ.get("environ_variable_name")
 
-#Retrieve file name from given path, excluding the file path name:
-var = os.path.basename("file_path")
-print(var)
-##Prints "file_name"##
+##PATHS:
+var = os.path(bytes_or_"string_objects")
+##Prints an object of the same type (if path or file name is returned)##
 
-#Retrieve directory name from given file path, excluding the file path name:
-var2 = os.path.dirname("directory_file_path")
-print(var2)
-##Prints "directory_name"##
+    ##FORMAT CONVENTIONS FOR OS PATHS:
+    os.path #by default, will always be the path module suitable for the OS that Python currently runs on; suitable for local paths
+    os.posixpath #sets UNIX-style paths
+    os.ntpath #sets Windows paths
 
-#Determines whether specified file path is absolute or not:
-var3 = os.path.isabs("file_path")
-print(var3)
-##Prints boolean value##
+    #Retrieve file name from given path, excluding the file path name:
+    var = os.path.basename("file_path")
+    print(var)
+    ##Prints "file_name"##
 
-#Determines whether specified file path is an existing directory or not:
-var4 = os.path.isdir("file_path")
-print(var4)
-##Prints boolean value##
+    #Retrieve directory name from given file path, excluding the file path name:
+    var2 = os.path.dirname("directory_file_path")
+    print(var2)
+    ##Prints "directory_name"##
 
-#Convert file path into "normalized"/lowercase characters; in Windows, forward slashes become backward slashes
-var5 = os.path.normcase("file_path")
-print(var5)
-##Prints lowercase file_path##
+    #Determines whether specified file path is absolute or not:
+    var3 = os.path.isabs("file_path")
+    print(var3)
+    ##Prints boolean value##
 
-#Print file path without redundant separators and up-level references; in Windows, forward slashes become backward slashes
-var6 = os.path.normpath("file_path")
-print(var6)
-##Prints file_path without redundant separators and/or up-level references##
+    #Determines whether specified file path is an existing directory or not:
+    var4 = os.path.isdir("file_path")
+    print(var4)
+    ##Prints boolean value##
 
-#Access tuple of directory name(s) and file name(s) of a given file path in individual strings:
-os.path.split("file_path")
-##Returns "parent_directory", "file_name"##
+    #Convert file path into "normalized"/lowercase characters; in Windows, forward slashes become backward slashes
+    var5 = os.path.normcase("file_path")
+    print(var5)
+    ##Prints lowercase file_path##
 
-#Find whether a given file path name exists or not:
-os.path.exists("file_path")
-##Returns boolean value##
+    #Print file path without redundant separators and up-level references; in Windows, forward slashes become backward slashes
+    var6 = os.path.normpath("file_path")
+    print(var6)
+    ##Prints file_path without redundant separators and/or up-level references##
 
-#Find whether a given file exists or not:
-os.path.isfile("file_path")
-##Returns boolean value##
+    #Access tuple of directory name(s) and file name(s) of a given file path in individual strings:
+    os.path.split("file_path")
+    ##Returns "parent_directory", "file_name"##
+
+    #Find whether a given file path name exists or not:
+    os.path.exists("file_path")
+    ##Returns boolean value##
+
+    #Find whether a given file exists or not:
+    os.path.isfile("file_path")
+    ##Returns boolean value##
+
+#
+
+
+#
+
+
+#
+
+
+#
+
+
+#
+
+
+#
+
+
+#
+
+
+#
+
+
+#
+
+
+#
