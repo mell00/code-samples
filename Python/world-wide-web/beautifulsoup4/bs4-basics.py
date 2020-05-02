@@ -61,9 +61,52 @@ type(tag)
             soup = BeautifulSoup(markup)
             comment = soup.b.string
 
+            #Access the comment object itself:
+            type(comment)
+            ##<class 'bs4.element.Comment'>##
+
+            #Display the comment object with HTML formatting:
+            print(soup.b.prettify())
+            ##<b>##
+            ##<!--comment-->##
+            ##</b>##
+
+        #Create and access a Stylesheet object (special type of navigable string for embedded CSS documents)
+        markup = "<style><!--stylesheet_name.css--></style>"
+        soup = BeautifulSoup(markup)
+        stylesheet = soup.b.string
+        type(stylesheet)
+        ##<class 'bs4.element.Stylesheet'>##
+
+        #Create and access Script object (special type of navigable string for embedded JS documents)
+        markup = "<script><!--script_name.js--></script>"
+        soup = BeautifulSoup(markup)
+        script = soup.b.string
+        type(script)
+        ##<class 'bs4.element.Script'>##
+
+        #Create and access TemplateString object (special type of navigable string for embedded HTML templates)
+        markup = "<template><!--temp_name.html--></template>"
+        soup = BeautifulSoup(markup)
+        templstr = soup.b.string
+        type(template)
+        ##<class 'bs4.element.TemplateString'>##
+
+
     #BeautifulSoup object
         #Represent whole parsed document:
         with open("index.html") as fp:
             soup = BeautifulSoup(fp)
 
         soup = BeautifulSoup("<html>data</html>")
+
+        #Combine two parsed documents:
+        doc = BeautifulSoup("<document><content/>INSERT FOOTER HERE</document", "xml")
+        footer = BeautifulSoup("<footer>Here's the footer</footer>", "xml")
+        doc.find(text="INSERT FOOTER HERE").replace_with(footer)
+        ##u'INSERT FOOTER HERE'##
+        print(doc)
+        ##<?xml version="1.0" encoding="utf-8"?>##
+        ##<document><content/><footer>Here's the footer</footer></document>##
+
+    #
